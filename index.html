@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HarKaam.in — Aapke Sheher ka Har Kaam Ka Solution Yaha</title>
+  <style>
+    :root{--accent:#e23b2b;--muted:#666}
+    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif;margin:0;color:#111}
+    header{padding:28px;background:#fff;border-bottom:1px solid #eee}
+    .container{max-width:1000px;margin:0 auto;padding:0 16px}
+    h1{font-size:28px;margin:6px 0}
+    p.lead{margin:6px 0;color:var(--muted)}
+    .cta{background:var(--accent);color:#fff;padding:12px 18px;border-radius:10px;display:inline-block;text-decoration:none;margin-top:8px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:20px 0}
+    .cat{background:#fafafa;border:1px solid #eee;padding:12px;border-radius:8px;text-align:center;font-weight:600}
+    .form-wrap{background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.04);max-width:760px;margin:16px auto}
+    label{display:block;margin-top:10px;font-weight:600}
+    input[type="text"], select, textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #ddd;margin-top:6px;box-sizing:border-box}
+    button{background:var(--accent);color:#fff;border:0;padding:12px 16px;border-radius:8px;margin-top:12px;font-weight:700;cursor:pointer}
+    footer{padding:18px;text-align:center;color:var(--muted);margin-top:28px}
+    /* Floating social buttons */
+    .social-fixed{position:fixed;right:12px;top:36%;display:flex;flex-direction:column;gap:12px;z-index:999}
+    .social-fixed a{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.12)}
+    .social-fixed img{width:28px;height:28px}
+    .small-note{font-size:13px;color:var(--muted);margin-top:8px}
+    .success{background:#eef9ef;border:1px solid #bfe6bf;color:#1b6e2b;padding:10px;border-radius:8px;margin-top:12px}
+  </style>
+  <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
+      <div style="font-weight:800">HarKaam.in</div>
+      <nav style="font-weight:600;color:#444">Aapke Sheher ka Har Kaam Ka Solution Yaha</nav>
+    </div>
+  </header>
+
+  <!-- ===== HEADER with logo - paste this in place of existing <header> ... </header> ===== -->
+<header>
+  <div class="container header-row">
+    <div class="brand">
+      <!-- Put your logo file in the same folder as index.html and name it logo.png -->
+      <a href="/">
+        <img src="/logo.png" alt="HarKaam.in logo" class="logo" width="300" height="300" />
+      </a>
+      <div class="brand-text">
+       <!-- <div class="brand-title">HarKaam.in</div>
+        <div class="brand-sub">Aapke Sheher ka Har Kaam Ka Solution Yaha</div>-->
+      </div>
+    </div>
+
+    <nav class="top-nav" aria-label="main navigation">
+      <a href="#form">Post Your Requirement</a>
+      <a href="https://wa.me/916202073057">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="container">
+    <section style="text-align:center;margin-top:18px">
+      <h1>Aapko jo chahiye, hum dilayenge</h1>
+      <p class="lead">Har Kaam, Har Jagah — <span id="city-text">Motihari</span></p>
+      <a class="cta" href="#form">Post Your Requirement</a>
+    </section>
+
+    <section aria-label="categories" class="grid" style="margin-top:18px">
+      <div class="cat">Waiters</div>
+      <div class="cat">Labour</div>
+      <div class="cat">Painter</div>
+      <div class="cat">Driver</div>
+      <div class="cat">Teacher</div>
+      <div class="cat">Plumber</div>
+      <div class="cat">Electrician</div>
+      <div class="cat">Maid</div>
+      <div class="cat">Editor</div>
+      <div class="cat">Coder</div>
+      <div class="cat">Others</div>
+    </section>
+
+    <section id="form" class="form-wrap" aria-labelledby="form-heading">
+      <h2 id="form-heading">Post Your Requirement</h2>
+      <p class="small-note">Form bharne ke baad hamari team aapse jaldi contact karegi. (Mobile number sahi dalein)</p>
+
+      <form id="reqForm">
+        <label>Full Name</label>
+        <input type="text" name="name" required placeholder="Aapka naam">
+
+        <label>Mobile Number (WhatsApp)</label>
+        <input type="text" name="phone" required placeholder="10 digit mobile number">
+
+        <label>City / Area</label>
+        <input type="text" name="city" required placeholder="Motihari / area name">
+
+        <label>Need Type</label>
+        <select name="need" required>
+          <option value="Labour">Labour</option>
+          <option value="Waiter">Waiter</option>
+          <option value="Driver">Driver</option>
+          <option value="Teacher">Teacher</option>
+          <option value="Electrician">Electrician</option>
+          <option value="Plumber">Plumber</option>
+          <option value="Maid">Maid</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label>How many / Quantity (agar applicable)</label>
+        <input type="text" name="quantity" placeholder="e.g., 2 log / 1 banda">
+
+        <label>When Needed</label>
+        <select name="whenNeeded" required>
+          <option value="Today">Today</option>
+          <option value="Tomorrow">Tomorrow</option>
+          <option value="This Week">This Week</option>
+          <option value="This Month">This Month</option>
+        </select>
+
+        <label>Extra Details</label>
+        <textarea name="details" rows="3" placeholder="Kuch aur jankari (optional)"></textarea>
+
+        <button type="submit">Submit Requirement</button>
+        <div id="responseMsg" style="display:none" class="success">Thank you! Hamari team aapse jaldi contact karegi.</div>
+      </form>
+
+      <p class="small-note" style="margin-top:12px">Phone/WhatsApp: <strong>+91 6202073057</strong></p>
+    </section>
+  </main>
+
+  <!-- Floating social icons (right side) -->
+  <div class="social-fixed" aria-hidden="true">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/916202073057" target="_blank" title="WhatsApp">
+      <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+    </a>
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/share/16peBtymkc/" target="_blank" title="Facebook">
+      <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook">
+    </a>
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/iamyourxpartner?igsh=MWtjYjVuemlxenpxbQ==" target="_blank" title="Instagram">
+      <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram">
+    </a>
+    <!-- Call -->
+    <a href="tel:+916202073057" title="Call">
+      <img src="https://img.icons8.com/color/48/000000/phone.png" alt="Call">
+    </a>
+  </div>
+
+  <footer>
+    <div class="container">© HarKaam.in — Motihari • Contact: +91 6202073057</div>
+  </footer>
+
+  <script>
+    // Change displayed city easily
+    var cityText = 'Aapke Sheher'; // edit if needed
+    document.getElementById('city-text').innerText = cityText;
+
+    // IMPORTANT: Replace this URL with your Apps Script Web App URL (from Google Apps Script deploy)
+    var APPS_SCRIPT_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbxwrEJFQbsWVCYVAOwgppRRdFjFOiHwvPoZLGM1l0KLwb1qsKenI0S1_P0b7AzrmomO/exec';
+
+
+    // Form submit handler
+    document.getElementById('reqForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      var form = e.target;
+      var data = {
+        name: form.name.value.trim(),
+        phone: form.phone.value.trim(),
+        city: form.city.value.trim(),
+        need: form.need.value,
+        quantity: form.quantity.value.trim(),
+        whenNeeded: form.whenNeeded.value,
+        details: form.details.value.trim()
+      };
+
+      // Basic validation
+      if (!data.name || !data.phone || !data.city) {
+        alert('Kripya name, phone aur city fields bhar dein.');
+        return;
+      }
+
+      // Send to Google Apps Script endpoint
+      fetch(APPS_SCRIPT_WEBAPP_URL, {
+        method: 'POST',
+        mode: 'no-cors', // use no-cors so browser won't block; Apps Script will still receive the POST.
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+      .then(function(){
+        // Show success message locally
+        document.getElementById('responseMsg').style.display = 'block';
+        form.reset();
+      })
+      .catch(function(err){
+        console.error(err);
+        alert('Kuch error hua. Try again or contact via WhatsApp.');
+      });
+    });
+  </script>
+  <script src="path-to-your-file.js"></script>
+
+</body>
+</html>
